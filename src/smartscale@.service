@@ -1,0 +1,11 @@
+[Unit]
+Description=FAUST CTF smartcale service
+
+[Service]
+ExecStart=-/usr/bin/stdbuf -o0 /srv/smartscale/art/bin/art -cp SmartScale.dex ninja.faust.smartscale.SmartScale /srv/smartscale/data
+WorkingDirectory=/srv/smartscale
+StandardInput=socket
+StandardOutput=socket
+User=smartscale
+LimitNPROC=100
+LimitCPU=60

@@ -1,0 +1,13 @@
+name: helloworld
+author:
+  - Alice <alice@faust.ninja>
+  - Bob <bob@faust.ninja>
+packages:
+  - build-essential
+  - openjdk-7-jdk
+  - openjdk-7-jre
+checker:
+  module: helloworld
+  class: HelloworldChecker
+  packages:
+    - python3-requests
